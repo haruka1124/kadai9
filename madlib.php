@@ -16,7 +16,8 @@
    }
    $random = mt_rand(0,count($temps)-1);
    $temp = $temps[$random];
-
+   unset($temps);
+   
    $mlib_url = "http://regal-sun-100211.appspot.com/madlib2?pos=";
    $url = $mlib_url.urlencode($temp);
 //   $context = stream_context_create(array('http' => array('ignore_errors' => true)));
